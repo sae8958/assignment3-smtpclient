@@ -51,8 +51,8 @@ def smtp_client(port=1025, mailserver='127.0.0.1'):
 
 def validateResponse(clientSocket: socket):
     resp = clientSocket.recv(1024).decode()
-    if resp[:3] != '250':
-        print('250 reply not received from server.')
+    # if resp[:3] != '250':
+    #     print('250 reply not received from server.')
 
 if __name__ == '__main__':
     smtp_client(1025, '127.0.0.1')
